@@ -7,18 +7,8 @@ import java.io.FileOutputStream;
 import java.nio.channels.FileChannel;
 
 public class HayStackImpl implements HayStack{
-	private FileChannel inputChannel;
-	private FileChannel outputChannel;
 			
-	public HayStackImpl(String dataFilePath) {
-		File dataFile = new File(dataFilePath);
-		try {
-			inputChannel = new FileInputStream(dataFile).getChannel();
-			outputChannel = new FileOutputStream(dataFile).getChannel();
-		}catch(FileNotFoundException fnfe) {
-			//:TODO
-		}
-	}
+
 
 	@Override
 	public void save(String path, byte[] bytes) {
